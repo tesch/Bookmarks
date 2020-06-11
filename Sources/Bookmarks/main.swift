@@ -6,3 +6,11 @@
 //
 
 import ArgumentParser
+
+struct Bookmarks: ParsableCommand {
+
+    static let configuration = CommandConfiguration(abstract: "Create and resolve bookmarks.", subcommands: [Create.self, Resolve.self])
+
+}
+
+Bookmarks.main()
