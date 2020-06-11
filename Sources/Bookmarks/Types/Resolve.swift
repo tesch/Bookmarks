@@ -13,7 +13,7 @@ struct Resolve: ParsableCommand {
 
     static let configuration = CommandConfiguration(abstract: "Resolve a bookmark.")
 
-    @Argument(transform: URL.init(fileURLWithPath:))
+    @Argument(help: "The to-be-resolved bookmark.", transform: URL.init(fileURLWithPath:))
     var target: URL
 
     func run() throws {

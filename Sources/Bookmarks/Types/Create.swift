@@ -13,10 +13,10 @@ struct Create: ParsableCommand {
 
     static let configuration = CommandConfiguration(abstract: "Create a bookmark.")
 
-    @Argument(transform: URL.init(fileURLWithPath:))
+    @Argument(help: "The to-be-bookmarked file or directory.", transform: URL.init(fileURLWithPath:))
     var source: URL
 
-    @Argument(transform: URL.init(fileURLWithPath:))
+    @Argument(help: "The location of the created bookmark.", transform: URL.init(fileURLWithPath:))
     var target: URL
 
     func run() throws {
